@@ -4,11 +4,14 @@ import styled from "styled-components";
 
 const Section = styled.div`
   height: 100vh;
-  background-color: rebeccapurple;
+  background-color: #51ce4d;
+  scroll-snap-align: center;
 `
 
 const Works = () => {
     return(
-        <div>Works</div>
+        <Section>Works</Section>
     )
 }
+
+export default Works

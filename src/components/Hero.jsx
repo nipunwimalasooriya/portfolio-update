@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const Section = styled.div`
   height: 100vh;
-  background-color: rebeccapurple;
+  background-color: #da636d;
+  scroll-snap-align: center;
 `
 
 const Hero = () => {
@@ -12,3 +13,5 @@ const Hero = () => {
         <Section>Hero</Section>
     )
 }
+
+export default Hero
