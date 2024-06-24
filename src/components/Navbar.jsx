@@ -60,6 +60,13 @@ const Button = styled.button`
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-in;
+
+    &:hover {
+        color: #643bd3;
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    }
 
 `;
 
