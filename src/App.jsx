@@ -12,6 +12,7 @@ const Container = styled.div`
   overflow-y: auto;
   scrollbar-width: none;
   color: white;
+  font-family: 'Montserrat';
   background: url("./img/bg.jpeg");
   &::-webkit-scrollbar{
     display: none;
