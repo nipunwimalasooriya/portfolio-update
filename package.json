@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@react-three/drei": "^9.107.1",
+    "@react-three/fiber": "^8.16.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-simple-maps": "^3.0.0",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "three": "^0.165.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
