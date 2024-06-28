@@ -92,7 +92,7 @@ const Who = () => {
             <Left>
               <Canvas camera = {{fov:25, position:[5,5,5]}}>
                 <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={3}/>
-                <ambientLight intensity={0.5} />
+                <ambientLight intensity={1} />
                 <directionalLight position={[3, 2, 1]} />
                 <Cube/>
               </Canvas>

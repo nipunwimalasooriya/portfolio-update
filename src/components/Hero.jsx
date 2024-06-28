@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 
 const Section = styled.div`
@@ -80,7 +82,7 @@ const Right = styled.div`
 
 const Img = styled.img`
   width: 800px;
-  height: 600px;
+  height: 700px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -116,7 +118,18 @@ const Hero = () => {
               <Button>Learn More</Button>     
             </Left>
             <Right>
-              {/* {3d model} */}
+            <Canvas>
+                <OrbitControls enableZoom={false}/>
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 5]} />
+                <Sphere args = {[1,100,200]} scale = {2.2}>
+                <MeshDistortMaterial 
+                color={"#7345bd"} 
+                attach = "material" 
+                destort ={0.5} 
+                speed = {2}/>
+                </Sphere>   
+            </Canvas>
               <Img src = "./img/Hero.png"/>
             </Right>
           </Container>
