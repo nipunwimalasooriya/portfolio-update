@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import WebDesign from "./WebDesign";
+import Development from "./Development";
+import VideoEditing from "./VideoEditing";
+import PhotoEditing from "./PhotoEditing";
+import SocialMedia from "./SocialMedia";
 
 const data = [
   "Web Design",
@@ -43,30 +48,26 @@ const ListItem = styled.li`
   -webkit-text-stroke: 1px white;
   position: relative;
 
-  &::before {
-    content: "${(props) => props.text}";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: width 0.5s ease;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-
   @media only screen and (max-width: 768px) {
     font-size: 24px;
     color: white;
     -webkit-text-stroke: 0px;
+  }
 
-    &::before {
-      display: none;
-    }
+  &::after {
+    content: "${(props) => props.text}";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s linear;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 `;
 
@@ -75,19 +76,32 @@ const Right = styled.div`
 `;
 
 const Works = () => {
+  const [work, setWork] = useState("Web Design");
+
+  const handleClick = (item) => {
+    console.log("Clicked item:", item);
+    setWork(item);
+  };
+
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item}>
+              <ListItem key={item} text={item} onClick={() => setWork(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
-        <Right></Right>
+        <Right>
+          {work === "Web Design" && <WebDesign />}
+          {work === "Development" && <Development />}
+          {work === "Video Editing" && <VideoEditing />}
+          {work === "Photo Editing" && <PhotoEditing />}
+          {work === "Social Media" && <SocialMedia />}
+        </Right>
       </Container>
     </Section>
   );
