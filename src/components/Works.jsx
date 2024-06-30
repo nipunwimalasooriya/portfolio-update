@@ -78,10 +78,6 @@ const Right = styled.div`
 const Works = () => {
   const [work, setWork] = useState("Web Design");
 
-  const handleClick = (item) => {
-    console.log("Clicked item:", item);
-    setWork(item);
-  };
 
   return (
     <Section>
