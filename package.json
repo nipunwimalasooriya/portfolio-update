@@ -12,6 +12,7 @@
     "@emailjs/browser": "^4.3.3",
     "@react-three/drei": "^9.107.1",
     "@react-three/fiber": "^8.16.8",
+    "@react-three/postprocessing": "^2.16.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
