@@ -25,12 +25,28 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px){
+
+    width: 100%;
+    flex-direction: column;
+
+
+}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px){
+
+    padding: 20px;
+    justify-content: center;
+
+
+}
 `;
 
 const List = styled.ul`
@@ -38,6 +54,14 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 768px){
+
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke : 0px;
+
+
+}
 `;
 
 const ListItem = styled.li`
@@ -50,7 +74,7 @@ const ListItem = styled.li`
 
   @media only screen and (max-width: 768px) {
     font-size: 24px;
-    color: white;
+    color: #949494;
     -webkit-text-stroke: 0px;
   }
 

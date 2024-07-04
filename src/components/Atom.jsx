@@ -41,7 +41,7 @@ const Atom = () => {
     <>
       <Shape />
       <EffectComposer>
-        <Bloom mipmapBlur luminanceThreshold={1} radius={0.7} />
+        <Bloom mipmapBlur luminanceThreshold={1} radius={0.5} />
       </EffectComposer>
     </>
   );

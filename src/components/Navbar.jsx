@@ -6,6 +6,13 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
 
+  @media screen and (max-width: 768px){
+
+    width: 100%;
+
+    
+  }
+
 `
 const Container = styled.div`
     width: 1400px;
@@ -14,12 +21,21 @@ const Container = styled.div`
     align-items: center;
     padding: 20px 20px;
 
+    @media screen and (max-width: 768px){
+
+        width: 100%;
+        padding: 10px;
+
+
+}
+
 `;
 
 const Links = styled.div`
     display: flex;
     align-items: center;
     gap: 30px;
+
     `;
 
 const Logo= styled.img`
@@ -31,6 +47,13 @@ const List = styled.ul`
     display: flex;
     gap: 20px;
     list-style: none;
+
+    @media screen and (max-width: 768px){
+
+display: none;
+
+
+}
     `;
 
 const ListItem = styled.li`
