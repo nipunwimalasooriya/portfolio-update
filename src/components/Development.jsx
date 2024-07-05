@@ -9,7 +9,7 @@ const Development = () => {
             <Stage environment={"city"} intensity={0.6}>
             <Atom/>
             </Stage>
-            <OrbitControls enableZoom = {false} autoRotate autoRotateSpeed={1.3}/>
+            <OrbitControls enableZoom = {false} autoRotate autoRotateSpeed={2}/>
         </Canvas>
     );
 };

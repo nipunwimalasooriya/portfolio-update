@@ -9,7 +9,7 @@ const WebDesign = () => {
             <Stage environment={"city"} intensity={0.6}>
             <Mac/>
             </Stage>
-            <OrbitControls enableZoom = {false} autoRotate autoRotateSpeed={4}/>
+            <OrbitControls enableZoom = {false} autoRotate autoRotateSpeed={2}/>
         </Canvas>
     );
 };
