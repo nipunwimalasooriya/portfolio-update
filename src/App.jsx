@@ -4,6 +4,7 @@ import Who from "./components/Who"
 import Works from "./components/Works"
 import Contact from "./components/Contact"
 import Test from "./components/Test"
+import Projects from './components/Projects';
 
 const Container = styled.div`
   height: 100vh;
@@ -23,6 +24,7 @@ function App() {
   return (
     <Container>
      <Hero/>
+     <Projects/>
      <Who/>
      <Works/>
      <Contact/>
