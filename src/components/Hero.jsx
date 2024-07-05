@@ -14,7 +14,7 @@ const Section = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
-    height: 200vh;
+    height: auto;
   }
 `;
 
@@ -30,6 +30,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 30px;
   }
 `;
 
@@ -43,6 +44,8 @@ const Left = styled.div`
   @media screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
+    text-align: center;
+    gap:5px;
   }
 `;
 
@@ -50,7 +53,11 @@ const Title = styled.h1`
   font-size: 74px;
 
   @media screen and (max-width: 768px) {
-    text-align: center;
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
   }
 `;
 
@@ -58,14 +65,28 @@ const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Line = styled.img`
   height: 5px;
+
+  @media screen and (max-width: 768px) {
+    width: 50px;
+  }
 `;
 
 const Subtitle = styled.h2`
   color: #643bd3;
+  font-size: 24px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const Desc = styled.p`
@@ -73,8 +94,8 @@ const Desc = styled.p`
   color: #e1d7ff;
 
   @media screen and (max-width: 768px) {
-    text-align: center;
-    padding: 20px;
+    font-size: 18px;
+    padding: 0 20px;
   }
 `;
 
@@ -110,6 +131,10 @@ const SocialMediaIcons = styled.div`
     &:hover {
       color: #643bd3;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
   }
 `;
 
@@ -149,7 +174,6 @@ const Img = styled.img`
 
 const Hero = () => {
   const handleDownload = () => {
-
     const fileUrl = './Nipun Wimalasooriya CV.pdf';
     const link = document.createElement('a');
     link.href = fileUrl;

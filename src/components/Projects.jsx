@@ -11,7 +11,6 @@ const Projects = () => {
       technologies: ['React', 'Python', 'FastAPI', 'OpenCV', 'PyTesseract'],
       description: 'Optical Charactor recognition system designed mainly to digitalies printed sinhala text accuratly.',
       link: 'https://github.com/nipunwimalasooriya/capstone_project_sinhalaOCR'
-      
     },
     {
       image: './img/Meditech.jpg',
@@ -19,7 +18,6 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
       description: 'This web application is designed to streamline the process of scheduling and managing doctor appointments.',
       link: 'https://github.com/Shehan-lakshitha/MediTech'
-
     },
     {
       image: './img/portfolio.jpg',
@@ -27,7 +25,6 @@ const Projects = () => {
       technologies: ['React', 'ThreeJS', 'EmailJS', 'Styled-Components'],
       description: 'This is my personal website that I frequently update with new technologies that I learn during my journey.',
       link: 'https://github.com/nipunwimalasooriya/portfolio-update'
-
     },
     {
       image: './img/Wavelane.jpg',
@@ -35,7 +32,6 @@ const Projects = () => {
       technologies: ['Figma', 'Photoshop'],
       description: 'UI Developed for a ecommerce clothing store with attreactive design.',
       link: 'https://www.figma.com/design/Kh5ONtRUuN1EZdKPRETjhK/Wave-Lane?node-id=0-1&t=RNQuHLCkQYJuleFq-1'
-
     },
     // Add more projects as needed
   ];
@@ -62,30 +58,33 @@ const Projects = () => {
 };
 
 const Section = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
 `;
 
 const Container = styled.div`
-  width: 1400px;
-
-  @media screen and (max-width: 768px){
-
-    width: 100%;
-
-
-}
-
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 `;
+
 const Title = styled.h1`
   font-size: 50px;
   margin-bottom: 20px;
   text-align: center;
-  
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 const ProjectsContainer = styled.div`
@@ -95,21 +94,21 @@ const ProjectsContainer = styled.div`
   justify-content: center;
 
   & > * {
-    flex: 1 1 calc(33.333% - 40px); 
+    flex: 1 1 calc(33.333% - 40px);
     max-width: calc(33.333% - 40px);
     box-sizing: border-box;
   }
 
   @media (max-width: 1024px) {
     & > * {
-      flex: 1 1 calc(50% - 20px); 
-      max-width: calc(50% - 20px); 
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
     }
   }
 
   @media (max-width: 768px) {
     & > * {
-      flex: 1 1 100%; 
+      flex: 1 1 100%;
       max-width: 100%;
     }
   }
