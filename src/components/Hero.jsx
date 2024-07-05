@@ -148,6 +148,17 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+  const handleDownload = () => {
+
+    const fileUrl = './Nipun Wimalasooriya CV.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute('download', true);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <Section>
       <Navbar />
@@ -173,7 +184,7 @@ const Hero = () => {
               <FaInstagram />
             </a>
           </SocialMediaIcons>
-          <Button>Download CV</Button>
+          <Button onClick={handleDownload}>Download CV</Button>
         </Left>
         <Right>
           <Canvas>

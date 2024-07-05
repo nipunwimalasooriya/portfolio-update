@@ -1,12 +1,18 @@
+// ProjectCard.js
 import React from 'react';
 import styled from 'styled-components';
 
-const ProjectCard = ({ image, title, description, link }) => {
+const ProjectCard = ({ image, title, description, link, technologies }) => {
   return (
     <StyledCard>
       <Image src={image} alt={title} />
       <CardContent>
         <Title>{title}</Title>
+        <TechList>
+          {technologies.map((tech, index) => (
+            <TechItem key={index}>{tech}</TechItem>
+          ))}
+        </TechList>
         <Description>{description}</Description>
         <Button href={link} target="_blank" rel="noopener noreferrer">
           View Project
@@ -18,20 +24,22 @@ const ProjectCard = ({ image, title, description, link }) => {
 
 const StyledCard = styled.div`
   width: 400px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Border to make it stand out */
+  background-color: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.3);
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 140px;
+  height: 100px;
   object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 `;
 
 const CardContent = styled.div`
@@ -39,15 +47,32 @@ const CardContent = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.5em;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 8px;
 `;
 
 const Description = styled.p`
-  font-size: 1em;
-  color: #666;
+  font-size: 15px;
+  color: #bdbdbd;
   margin-bottom: 16px;
+`;
+
+const TechList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 5px;
+`;
+
+const TechItem = styled.li`
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgba(145, 92, 182, 0.4); 
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
 `;
 
 const Button = styled.a`
@@ -58,16 +83,17 @@ const Button = styled.a`
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 400;
   text-align: center;
   transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-in;
   display: inline-block;
   text-decoration: none;
+  font-size: 12px;
 
   &:hover {
     color: #643bd3;
     background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
   }
 `;
 
