@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 `;
 
 const Container = styled.div`
@@ -81,7 +81,12 @@ const Button = styled.button`
 `;
 
 const Right = styled.div`
+
   flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+
 
   @media screen and (max-width: 768px){
 

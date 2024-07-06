@@ -59,7 +59,7 @@ const Projects = () => {
 
 const Section = styled.div`
   min-height: 100vh;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;

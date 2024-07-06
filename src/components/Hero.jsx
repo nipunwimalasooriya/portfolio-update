@@ -6,8 +6,8 @@ import { Canvas } from "@react-three/fiber";
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+  height: 100vh; 
+  /* scroll-snap-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +65,6 @@ const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-content: center;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -161,8 +160,8 @@ const Img = styled.img`
   animation: animate 3s infinite ease alternate;
 
   @media screen and (max-width: 768px) {
-    width: 400px;
-    height: 500px;
+    width: 70%;
+    height: 350px;
   }
 
   @keyframes animate {
