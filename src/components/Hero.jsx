@@ -1,9 +1,22 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Navbar from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
+
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Section = styled.div`
   height: 100vh; 
@@ -14,7 +27,7 @@ const Section = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
-    height: auto;
+    height: 100%;
   }
 `;
 
@@ -30,7 +43,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 `;
 
@@ -148,8 +161,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 800px;
-  height: 650px;
+  width: 600px;
+  height: 600px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -159,8 +172,9 @@ const Img = styled.img`
   margin: auto;
   animation: animate 3s infinite ease alternate;
 
-  @media screen and (max-width: 768px) {
-    width: 70%;
+
+  @media only screen and (max-width: 768px) {
+    width: 250px;
     height: 350px;
   }
 
@@ -172,6 +186,12 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+
+  const { ref: leftRef, inView: leftInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  
   const handleDownload = () => {
     const fileUrl = './Nipun Wimalasooriya CV.pdf';
     const link = document.createElement('a');
@@ -186,7 +206,7 @@ const Hero = () => {
     <Section>
       <Navbar />
       <Container>
-        <Left>
+        <Left ref={leftRef} style={{ opacity: leftInView ? 1 : 0 }}>
           <Title>Let's Build Together</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
