@@ -1,30 +1,19 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Navbar from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
 
-const fadeInUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+
 
 const Section = styled.div`
-  height: 100vh; 
+  height: 100vh;
   /* scroll-snap-align: center; */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @media screen and (max-width: 768px) {
     height: 100%;
@@ -204,7 +193,6 @@ const Hero = () => {
 
   return (
     <Section>
-      <Navbar />
       <Container>
         <Left ref={leftRef} style={{ opacity: leftInView ? 1 : 0 }}>
           <Title>Let's Build Together</Title>
