@@ -23,7 +23,7 @@ const Section = styled.div`
 const Container = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 75vw;
   display: flex;
   justify-content: space-between;
 
@@ -176,10 +176,6 @@ const Img = styled.img`
 
 const Hero = () => {
 
-  const { ref: leftRef, inView: leftInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   
   const handleDownload = () => {
     const fileUrl = './Nipun Wimalasooriya CV.pdf';
@@ -194,7 +190,7 @@ const Hero = () => {
   return (
     <Section>
       <Container>
-        <Left ref={leftRef} style={{ opacity: leftInView ? 1 : 0 }}>
+        <Left>
           <Title>Let's Build Together</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />

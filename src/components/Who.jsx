@@ -19,7 +19,7 @@ const Section = styled.div`
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 75vw;
   display: flex;
   justify-content: space-between;
 

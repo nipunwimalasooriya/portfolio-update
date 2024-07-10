@@ -69,7 +69,7 @@ const Section = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1400px;
+  max-width: 75vw;
   margin: 0 auto;
 `;
 

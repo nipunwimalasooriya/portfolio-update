@@ -7,8 +7,8 @@ import PhotoEditing from "./PhotoEditing";
 import SocialMedia from "./SocialMedia";
 
 const data = [
-  "Web Design",
   "Development",
+  "Web Design",
   "Video Editing",
   "Photo Editing",
   "Social Media",
@@ -22,7 +22,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1400px;
+  width: 75vw;
   display: flex;
   justify-content: space-between;
 
@@ -103,7 +103,7 @@ const Right = styled.div`
 `;
 
 const Works = () => {
-  const [work, setWork] = useState("Web Design");
+  const [work, setWork] = useState("Development");
 
 
   return (
@@ -119,8 +119,8 @@ const Works = () => {
           </List>
         </Left>
         <Right>
-          {work === "Web Design" && <WebDesign />}
           {work === "Development" && <Development />}
+          {work === "Web Design" && <WebDesign />}
           {work === "Video Editing" && <VideoEditing />}
           {work === "Photo Editing" && <PhotoEditing />}
           {work === "Social Media" && <SocialMedia />}
