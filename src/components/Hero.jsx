@@ -14,10 +14,6 @@ const Section = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media screen and (max-width: 768px) {
-    height: 100%;
-  }
 `;
 
 const Container = styled.div`
@@ -32,7 +28,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
   }
 `;
 

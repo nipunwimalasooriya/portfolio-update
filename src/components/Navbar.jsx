@@ -11,7 +11,10 @@ const Section = styled.div`
   background: linear-gradient(to bottom, #12003f, rgba(0, 0, 0, 0));
   backdrop-filter: blur(4px);
 
-  
+  @media screen and (max-width: 768px) {
+    width:95%;
+
+  }
 `;
 
 const Container = styled.div`
