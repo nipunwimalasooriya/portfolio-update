@@ -1,19 +1,18 @@
-// ProjectCard.js
 import React from 'react';
 import styled from 'styled-components';
 
-const ProjectCard = ({ image, title, description, link, technologies }) => {
+const ProjectCard = ({ image, ptitle, pdescription, link, ptechnologies }) => {
   return (
     <StyledCard>
-      <Image src={image} alt={title} />
+      <Image src={image} alt={ptitle} />
       <CardContent>
-        <Title>{title}</Title>
+        <Title>{ptitle}</Title>
         <TechList>
-          {technologies.map((tech, index) => (
+          {ptechnologies.map((tech, index) => (
             <TechItem key={index}>{tech}</TechItem>
           ))}
         </TechList>
-        <Description>{description}</Description>
+        <Description>{pdescription}</Description>
         <Button href={link} target="_blank" rel="noopener noreferrer">
           View Project
         </Button>

@@ -1,4 +1,3 @@
-// Projects.js
 import React from 'react';
 import styled from 'styled-components';
 import ProjectCard from './ProjectCard';
@@ -7,32 +6,33 @@ const Projects = () => {
   const projects = [
     {
       image: './img/SinhalaOCR.jpg',
-      title: 'Sinhala OCR',
-      technologies: ['React', 'Python', 'FastAPI', 'OpenCV', 'PyTesseract'],
-      description: 'Optical Charactor recognition system designed mainly to digitalies printed sinhala text accuratly.',
+      ptitle: 'Sinhala OCR',
+      ptechnologies: ['React', 'Python', 'FastAPI', 'OpenCV', 'PyTesseract'],
+      pdescription: 'Optical Character recognition system designed mainly to digitize printed Sinhala text accurately.',
       link: 'https://github.com/nipunwimalasooriya/capstone_project_sinhalaOCR'
     },
     {
       image: './img/Meditech.jpg',
-      title: 'MediTech',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
-      description: 'This web application is designed to streamline the process of scheduling and managing doctor appointments.',
+      ptitle: 'MediTech',
+      ptechnologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
+      pdescription: 'This web application is designed to streamline the process of scheduling and managing doctor appointments.',
       link: 'https://github.com/Shehan-lakshitha/MediTech'
     },
     {
       image: './img/portfolio.jpg',
-      title: 'Personal Portfolio',
-      technologies: ['React', 'ThreeJS', 'EmailJS', 'Styled-Components'],
-      description: 'This is my personal website that I frequently update with new technologies that I learn during my journey.',
+      ptitle: 'Personal Portfolio',
+      ptechnologies: ['React', 'ThreeJS', 'EmailJS', 'Styled-Components'],
+      pdescription: 'This is my personal website that I frequently update with new technologies that I learn during my journey.',
       link: 'https://github.com/nipunwimalasooriya/portfolio-update'
     },
     {
       image: './img/Wavelane.jpg',
-      title: 'Wave Lane UI',
-      technologies: ['Figma', 'Photoshop'],
-      description: 'UI Developed for a ecommerce clothing store with attreactive design.',
+      ptitle: 'Wave Lane UI',
+      ptechnologies: ['Figma', 'Photoshop'],
+      pdescription: 'UI Developed for an ecommerce clothing store with an attractive design.',
       link: 'https://www.figma.com/design/Kh5ONtRUuN1EZdKPRETjhK/Wave-Lane?node-id=0-1&t=RNQuHLCkQYJuleFq-1'
     },
+    
     // Add more projects as needed
   ];
 
@@ -45,9 +45,9 @@ const Projects = () => {
             <ProjectCard
               key={index}
               image={project.image}
-              title={project.title}
-              technologies={project.technologies}
-              description={project.description}
+              ptitle={project.ptitle}
+              ptechnologies={project.ptechnologies}
+              pdescription={project.pdescription}
               link={project.link}
             />
           ))}
@@ -59,7 +59,6 @@ const Projects = () => {
 
 const Section = styled.div`
   min-height: 100vh;
-  /* scroll-snap-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;

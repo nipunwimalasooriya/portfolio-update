@@ -15,7 +15,7 @@ const Container = styled.div`
   scrollbar-width: none;
   color: white;
   font-family: 'Montserrat';
-  background: url("./img/bg.jpeg");
+  background: url("./img/background.jpg");
   padding-top: 80px; 
   &::-webkit-scrollbar {
     display: none;
