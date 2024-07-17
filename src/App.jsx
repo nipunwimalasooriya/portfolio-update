@@ -8,6 +8,8 @@ import Contact from "./components/Contact";
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 
+
+//comment
 const Container = styled.div`
   height: 100vh;
   scroll-behavior: smooth;
