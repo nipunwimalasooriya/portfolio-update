@@ -32,6 +32,20 @@ const Projects = () => {
       pdescription: 'UI Developed for an ecommerce clothing store with an attractive design.',
       link: 'https://www.figma.com/design/Kh5ONtRUuN1EZdKPRETjhK/Wave-Lane?node-id=0-1&t=RNQuHLCkQYJuleFq-1'
     },
+    {
+      image: './img/Jail Break.png',
+      ptitle: 'Jail Break',
+      ptechnologies: ['C#', 'Unity'],
+      pdescription: '2D strategic puzzle game developed using Unity.',
+      link: 'https://wikumchamith.itch.io/jail-break'
+    },
+    {
+      image: './img/EMS CRUD.png',
+      ptitle: 'EMS',
+      ptechnologies: ['React JS', 'Express JS', 'MySQL', 'Node JS'],
+      pdescription: 'CURD Rest API web application to manage employees of any organization with JWT authentication with Admin dashboard.',
+      link: 'https://github.com/nipunwimalasooriya/EMS'
+    },
     
     // Add more projects as needed
   ];
