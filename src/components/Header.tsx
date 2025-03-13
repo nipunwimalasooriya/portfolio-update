@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { navItems } from "@/lib/data";
 import { Menu, X, Linkedin, Github, Facebook, Instagram, Moon, Sun } from "lucide-react";
@@ -67,7 +66,7 @@ const Header = () => {
         isScrolled ? "glass py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="container relative z-50 mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="text-xl font-bold text-gradient">
           NW.
@@ -93,11 +92,7 @@ const Header = () => {
             className="p-2 rounded-full hover:bg-accent/50 text-foreground/70 hover:text-primary transition-colors duration-200"
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? (
-              <Sun size={20} />
-            ) : (
-              <Moon size={20} />
-            )}
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <a
             href="https://www.linkedin.com/in/nipun-wimalasooriya/"
@@ -144,11 +139,7 @@ const Header = () => {
             className="p-2 rounded-full hover:bg-accent/50 text-foreground/70 hover:text-primary transition-colors duration-200"
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? (
-              <Sun size={20} />
-            ) : (
-              <Moon size={20} />
-            )}
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={toggleMobileMenu}
