@@ -132,6 +132,7 @@ const Hero = () => {
               src="./img/Hero.png"
               alt="Nipun Wimalasooriya"
               className="relative z-10 h-[300px] md:h-[600px] w-auto object-contain animate-float"
+              loading="lazy"
             />
           </div>
         </div>
