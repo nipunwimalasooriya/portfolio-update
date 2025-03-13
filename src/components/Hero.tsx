@@ -77,7 +77,7 @@ const Hero = () => {
             {/* Social Icons */}
             <div className="flex items-center space-x-4 justify-center md:justify-start">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/nipun-wimalasooriya/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-all duration-300 hover:scale-110"
@@ -86,7 +86,7 @@ const Hero = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/nipunwimalasooriya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-all duration-300 hover:scale-110"
@@ -95,7 +95,7 @@ const Hero = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/nipunwimalasooriya/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-all duration-300 hover:scale-110"
@@ -104,7 +104,7 @@ const Hero = () => {
                 <Facebook size={24} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/nipunwimalasooriya/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-all duration-300 hover:scale-110"
