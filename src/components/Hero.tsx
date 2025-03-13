@@ -60,8 +60,11 @@ const Hero = () => {
                     "A Problem Solver",
                     "Developer",
                     "Creative Thinker",
+                    "UI/UX Designer",
+                    "Software Engineer",
+                    "Design Enthusiast",
+                    "Tech Enthusiast",
                   ]}
-                  speed={60}
                 />
               </span>
             </h1>

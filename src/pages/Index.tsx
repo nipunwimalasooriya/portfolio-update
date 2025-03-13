@@ -71,7 +71,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen">
       <AnimatedBackground />
-      <Header />
+      <Header/>
       <main>
         <Hero />
         <Skills />
